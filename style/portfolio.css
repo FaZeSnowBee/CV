@@ -5,6 +5,10 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+ html{
+  display: flex;
+ }
+
 
 p{
   font-family: "Overpass",sans-serif;
@@ -13,7 +17,7 @@ p{
   color: rgb(46, 46, 46);
   line-height: 1.75;
   display: block;
-  width: 744px;
+  width: 100%;
   
 }
 
@@ -164,7 +168,6 @@ h2{
   color: #21343B;
   line-height: 1.75;
   display: block;
-  width: 744px;
   margin-top: 24px;
   text-align: left;
 
@@ -286,11 +289,12 @@ hr{
 
 
  body{
-  background-color:#EBE9EA ;
+  background-color:#EBE9EA;
 }
 
 main{}
 
+/*@media*/
 .video{
   margin: 0 auto;
   width: 1000px;
@@ -317,7 +321,7 @@ main{}
 .header{
   
   display: flex;
-  background-color:#EBE9EA;
+  background-color:#e4e4e4;
   align-items: center;
   padding-left: 144px;
   padding-right: 144px;
@@ -399,24 +403,35 @@ a{
   width: 216px;
   height: 216px;
 }
-
-
-/*POSITION ABSOLUTE!!!!!!!!!!!!!!!!!!!!!*/
-.ou2{
- 
-  object-fit: cover;
-  object-position: center;
-  position: relative; 
-  width: 630px;
-  height: 630px;
-  border-radius: 300px;
+.oufoto_2{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  
 }
 
+
+/*@media*/
+.ou2{
+  object-fit: cover;
+  object-position: center;
+  position:relative; 
+  width: 600px;
+  height: 600px;
+  border-radius: 300px;
+  
+}
+
+/*@media*/
 .ou_3{
   width: 576px;
   height: 576px;
   
 }
+
+
+
 
 .image_grid{
   --gap:24px;
@@ -437,7 +452,7 @@ a{
   width: 100%;
   height: 100%;
   object-fit:cover;
-  border-radius: 24px;
+  border-radius: 500px;
   cursor: pointer;
 }
 
@@ -449,15 +464,20 @@ a{
 }
 
 .A{
+  flex: 1;
   padding-left: 144px;
 }
 
 .B{
+  flex: 1;
   display: flex;
   justify-content: center;
-  
+  margin-top: auto;
+  margin-bottom: auto;
+  object-fit: contain;
   width: 100%;
-  height: 630px;
+  padding-right: 144px;
+  
   
 }
 
@@ -465,19 +485,30 @@ a{
   display: flex;
 }
 
+/*@media*/
 .A_2{
+  flex: 1;
   display: flex;
   justify-content: left;
-  margin-left: 144px;
-  width: 744px;
+  padding-left: 144px;
+  width: 100%;
   height: 576px;
 }
 
+/*@media*/
 .B_2{
+  flex: 1;
   
-  margin-left: 144px;
-  width: 744px;
+  padding-right: 144px;
+  width: 100%;
   height: 576px;
+}
+
+.AB_middle{
+  padding: 50px;
+}
+
+.gap{
 }
 
 .row_skills{
@@ -489,7 +520,6 @@ a{
 .colume_1{
   flex:1;
   padding-left: 48px;
-  margin-left: -48px;
   height: 100%;
 }
 
@@ -502,7 +532,7 @@ a{
 
 .colume_3{
   flex:1;
-  width: 511px;
+  width: 100%;
   padding-left: 48px;
   height: 100%;
   
@@ -517,15 +547,92 @@ a{
   text-align: center;
 }
 
+/*@media*/
 .obsah_footeru{
-  width: 1320px;
+  width: 100%;
   display: inline-block;
   justify-content: center;
   padding: 48px 144px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px){
+  .AB_middle{
+    display: none;
+  }
+ 
+  .image_grid{
+    --gap:24px;
+    --num-cols:1;
+    --row-width: 224px;
+    --row-height:360px;
+  
+    padding: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols),1fr);
+    grid-auto-rows: var(--row-height);
+    gap: 24px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .row_skills{
+    display: block;
+    padding-left: 144px;
+    padding-right: 144px;
+    width: 100%;
+    
+    
+  }
+  
+  .colume_1{
+    flex:1;
+    padding-left: 48px;
+    height: 100%;
+  }
+  
+  .colume_2{
+    flex:1;
+    padding-left: 48px;
+    height: 100%;
+    
+    
+  }
+  
+  .colume_3{
+    flex:1;
+    width: 100%;
+    padding-left: 48px;
+    height: 100%;
+    
+  }
+
+  ul {
+    list-style:none;
+   }
+   
+   ul li::before {
+     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+     color: #FE9B71; /* Change the color */
+     font-weight: bold; /* If you want it to be bold */
+     display: inline-block; /* Needed to add space between the bullet and the text */
+     width: 1rem; /* Also needed for space (tweak if needed) */
+     margin-left: 0rem; /* Also needed for space (tweak if needed) */
+   }
+   
+   li {
+     color: #21343B;
+     font-family: 'Overpass', sans-serif;
+     font-size: 18px;
+     line-height: 24px;
+     font-weight: 200;
+     letter-spacing: 0.5px;
+     margin-top: 12px;
+     
+   }
   
 }
 
-
+/*udělat optimalizaci na mobil skills + grid + ostatní*/
 
 
 
