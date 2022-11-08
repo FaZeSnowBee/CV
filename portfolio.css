@@ -555,7 +555,7 @@ a{
   padding: 48px 144px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 375px){
+@media only screen (max-width: 375px){
   .AB_middle{
     display: none;
   }
@@ -575,14 +575,16 @@ a{
     padding-right: 48px;
   }
 
+  .mobile{
+    width: ;
+  }
   .row_skills{
     display: block;
     padding-left: 144px;
     padding-right: 144px;
-    width: 100%;
-    
-    
+    width: 100%; 
   }
+  
   
   .colume_1{
     flex:1;
