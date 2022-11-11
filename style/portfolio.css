@@ -43,15 +43,6 @@ p{
  
 }
 
-.portfolio_pic{
-  display:flex
-  gap: 1rem;
-}
-
-.portfolio_pic_1{
-
-}
-
 ul {
  list-style:none;
 }
@@ -294,7 +285,6 @@ hr{
   background:#EBE9EA;
   }
 
-main{}
 
 /*@media*/
 .video{
@@ -635,8 +625,7 @@ a{
   padding: 50px;
 }
 
-.gap{
-}
+
 
 .row_skills{
   display: flex;
