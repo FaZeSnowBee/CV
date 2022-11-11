@@ -351,9 +351,7 @@ main{}
   flex: 1;
   display:flex;
   text-align: center;
-
-  justify-content: center;
-  
+  justify-content: center; 
 }
 
 .menu{
@@ -373,9 +371,7 @@ transition: 0.5s;
 
 .right-section{
   display: flex;
-  justify-content: right;
-  
-  
+  justify-content: right; 
 }
 
 label{
@@ -421,6 +417,10 @@ background: linear-gradient(180deg,#777,#3a3a3a);
 label:active:after{
  width: 48px;
 }
+
+
+
+
 /*CHECKED*/
 body:has(.right-section):has(input:checked){
  background: #15202B;
@@ -492,6 +492,22 @@ body:has(input:checked) .footer{
   transition: 0.3s;
  }
 
+ body:has(input:checked) .menu:hover{
+  background-color: #ebad11;
+  transition: 0.3s;
+ }
+
+ body:has(input:checked) .my_buttons:hover{
+  background-color:rgb(224, 201, 51);
+  transition: 0.3s;
+ }
+
+ body:has(input:checked) .my_buttons_2:hover{
+  background-color:#ed6313;
+  transition: 0.3s;
+ }
+/*CHECKED*/
+
 
 a{
   text-decoration: none;
@@ -499,29 +515,13 @@ a{
 }
 
 .menu:hover{
-  background-color: rgb(224, 201, 51) ;
-  
+  background-color: rgb(224, 201, 51) ; 
 }
 .menu:active{
   background-color:#FE9B71 ;
   
 }
 
-.section_home{
-  min-height: 100hv;
-}
-.section_about{
-
-}
-.section_skill{
-
-}
-.section_portfolio{
-
-}
-.section_contact{
-
-}
 
 .oufoto{
   display: flex;
